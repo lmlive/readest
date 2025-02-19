@@ -300,7 +300,7 @@ const Annotator: React.FC<{ bookKey: string }> = ({ bookKey }) => {
     });
 
     const { booknotes: annotations = [] } = config;
-    if (selection) navigator.clipboard?.writeText(selection.text);
+    if (selection) navigator?.clipboard?.writeText(selection.text);
     const cfi = view?.getCFI(selection.index, selection.range);
     if (!cfi) return;
     const annotation: BookNote = {

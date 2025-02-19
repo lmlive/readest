@@ -4,7 +4,10 @@
   "repository": "readest/readest",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tauri": "pnpm --filter @readest/readest-app tauri"
+    "tauri": "pnpm --filter @readest/readest-app tauri",
+    "build": "pnpm --filter @readest/readest-app build",
+    "start-web": "pnpm --filter @readest/readest-app start-web",
+    "dev-web": "pnpm --filter @readest/readest-app dev-web"
   },
   "devDependencies": {
     "@sindresorhus/tsconfig": "^6.0.0",

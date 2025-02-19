@@ -1,0 +1,7 @@
+**/node_modules
+apps/readest-app/.next
+apps/readest-app/.open-next
+apps/readest-app/.wrangler
+apps/readest-app/out
+apps/readest-app/src-tauri
+

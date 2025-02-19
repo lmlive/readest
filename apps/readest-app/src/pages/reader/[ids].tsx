@@ -1,3 +1,4 @@
+'use client'
 import { useRouter } from 'next/router';
 import { AuthProvider } from '@/context/AuthContext';
 import { EnvProvider } from '@/context/EnvContext';
