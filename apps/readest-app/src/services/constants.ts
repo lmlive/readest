@@ -383,9 +383,10 @@ export const ONE_COLUMN_MAX_INLINE_SIZE = 9999;
 
 export const BOOK_IDS_SEPARATOR = '+';
 
-export const DOWNLOAD_READEST_URL = 'https://readest.com?utm_source=readest_web';
+const webHost=process.env['NEXT_PUBLIC_WEB_URL'];
+export const DOWNLOAD_READEST_URL = `${webHost}/download`;
 
-export const READEST_WEB_BASE_URL = 'https://web.readest.com';
+export const READEST_WEB_BASE_URL =  webHost;
 
 export const SYNC_PROGRESS_INTERVAL_SEC = 60;
 export const SYNC_NOTES_INTERVAL_SEC = 10;

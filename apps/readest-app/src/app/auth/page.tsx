@@ -35,8 +35,8 @@ interface ProviderLoginProp {
   Icon: React.ElementType;
   label: string;
 }
-
-const WEB_AUTH_CALLBACK = 'https://web.readest.com/auth/callback';
+const webHost=process.env['NEXT_PUBLIC_WEB_URL'];
+const WEB_AUTH_CALLBACK =  `${webHost}/auth/callback`;
 const DEEPLINK_CALLBACK = 'readest://auth/callback';
 
 const ProviderLogin: React.FC<ProviderLoginProp> = ({ provider, handleSignIn, Icon, label }) => {

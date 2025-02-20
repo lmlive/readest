@@ -1,5 +1,5 @@
 # 构建阶段
-FROM registry.cn-hangzhou.aliyuncs.com/kdmili/dev:node AS builder
+FROM registry.cn-hangzhou.aliyuncs.com/kdmili/dev:node.22.8.0 AS builder
 
 # 设置环境变量
 ENV SHELL=/bin/bash
