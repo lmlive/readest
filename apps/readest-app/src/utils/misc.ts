@@ -30,7 +30,12 @@ export const makeSafeFilename = (filename: string, replacement = '_') => {
   return safeName.trim();
 };
 
-export const getUserLang = () => navigator?.language.split('-')[0] || 'en';
+export const getUserLang = () => {
+  if (navigator) {
+    return navigator.language?.split('-')[0] ?? ''
+  }
+  return 'en';
+}
 
 export const isCJKEnv = () => ['zh', 'ja', 'ko'].includes(getUserLang());
 
@@ -45,7 +50,7 @@ export const getUserLocale = (lang: string): string | undefined => {
 };
 
 export const getOSPlatform = () => {
-  const userAgent = navigator.userAgent.toLowerCase();
+  const userAgent = navigator?.userAgent?.toLowerCase()??'';
 
   if (/iphone|ipad|ipod/.test(userAgent)) return 'ios';
   if (userAgent.includes('android')) return 'android';
